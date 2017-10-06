@@ -8,7 +8,6 @@
 # Each animal should be written in separate lines
 # The program should only save animals, no need to print them
 
-
 import sys
 
 animals_from_user = sys.argv
@@ -34,7 +33,5 @@ def save_animals(animals_list):
             else:
                 f.writelines(animal + "\n")
         
-                
-
     
 check_user_inputs(animals_from_user)
