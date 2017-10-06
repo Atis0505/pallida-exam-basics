@@ -65,9 +65,9 @@ class CandyShop:
                 number_of_lollipops +=1
             elif sweet.sweet_type == "candy":
                 number_of_candies +=1
-        return "Inventory: " + str(number_of_candies) + " candies, " + str(number_of_lollipops) + " lollipops, Income:" + str(self.income) + ", Sugar: "+str(self.amount_of_sugar)+"gr"
+        return "Inventory: " + str(number_of_candies) + " candies, " + str(number_of_lollipops) + " lollipops, Income:" \
+                    + str(self.income) + ", Sugar: "+str(self.amount_of_sugar)+"gr"
        
-
 
 candy_shop = CandyShop(300)
 candy_shop.create_sweets("candy")
