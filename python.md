@@ -32,8 +32,8 @@ The application is accepted if:
 
 ###  What is the difference between a function and a method? [2p]
 #### Your answer:
-[add your answer here]
+The fubction is a separated block, what you can use anytime when you want. The method is kind of functions, this method is a fucntion of objects. You can use it, after when you already created one object. -> if Person class has drink method, and father is an object from person class: father.drink()
 
 ### What is the constructor? When it is used? [2p]
 #### Your answer:
-[add your answer here]
+When you are creating a new object from the class. That gives a structure for the object. It's contain the atributes of object, and list of parameters, what we need for creating object. Default constructor: __init__(self)
