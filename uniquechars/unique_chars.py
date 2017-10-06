@@ -16,6 +16,7 @@ def unique_characters(input_string):
     else:
         return unique_chars_list
 
+
 print(unique_characters("anagram"))
 # Should print out:
 # ["n", "g", "r", "m"]
