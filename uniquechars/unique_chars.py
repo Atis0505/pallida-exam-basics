@@ -13,8 +13,6 @@ def unique_characters(input_string):
     unique_chars_list = [letter for letter, value in letters_dict.items() if value == 1]
     if len(input_string) == 0:
         return False
-    elif len(unique_char_list) == 0:
-        return -1
     else:
         return unique_chars_list
 

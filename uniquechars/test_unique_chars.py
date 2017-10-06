@@ -12,7 +12,7 @@ class TestUnique_Chars(unittest.TestCase):
 
     
     def test_no_unique_letter_in_word(self):
-        self.assertEqual(unique_characters("aabb"), -1)
+        self.assertEqual(unique_characters("aabb"), [])
 
     
 if __name__ == "__main__":
