@@ -25,12 +25,11 @@ class Sweet:
         elif self.sweet_type == "lollipop":
             self.price = 10
             self.sugar = 5
-
+        
 
 class CandyShop:
     def __init__(self, amount_of_sugar):
         self.amount_of_sugar = amount_of_sugar
-        self.money
         self.lollipops_and_candies = []
         self.income = 0
 
@@ -53,11 +52,21 @@ class CandyShop:
                 self.income += sweet.price
 
 
-    def buy_sugar(self, amount_of_sugar):
-        self.income -= amount_of_sugar/10
+    def buy_sugar(self, bought_sugar):
+        self.income -= int(bought_sugar/10)
+        self.amount_of_sugar += bought_sugar
 
-    
 
+    def __repr__(self):
+        number_of_lollipops = 0
+        number_of_candies = 0
+        for sweet in self.lollipops_and_candies:
+            if sweet.sweet_type == "lollipop":
+                number_of_lollipops +=1
+            elif sweet.sweet_type == "candy":
+                number_of_candies +=1
+        return "Inventory: " + str(number_of_candies) + " candies, " + str(number_of_lollipops) + " lollipops, Income:" + str(self.income) + ", Sugar: "+str(self.amount_of_sugar)+"gr"
+       
 
 
 candy_shop = CandyShop(300)
@@ -69,7 +78,7 @@ print(candy_shop)
 # Should print out:
 # Invetory: 2 candies, 2 lollipops, Income: 0, Sugar: 270gr
 candy_shop.sell("candy", 1)
-print(candy_shop
+print(candy_shop)
 # Should print out:
 # "Invetory: 1 candies, 2 lollipops, Income:20, Sugar: 285gr"
 candy_shop.raise_prices(5)
