@@ -9,7 +9,8 @@ def unique_characters(input_string):
             letters_dict[letter] += 1
         else:
             letters_dict[letter] = 1
-    
+    unique_char_list = []
+    unique_chars_list = [letter for letter, value in letters_dict.items() if value == 1]
     return unique_chars_list
 
 print(unique_characters("anagram"))
